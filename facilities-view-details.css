@@ -11,6 +11,9 @@
 body {
   width: 100vw;
   height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .facility-details-container {
@@ -87,6 +90,17 @@ body {
   color: #f13054;
 }
 
+main {
+  width: 100%;
+}
+
+.facilities-details-inner-container {
+  display: grid;
+  grid-template-columns: 60% 35%;
+  grid-gap: 100px;
+  width: 100%;
+}
+
 /* START OF MAIN HALF SECTION  */
 .facility-details-desc-section {
   /* width: 118%; */
@@ -116,13 +130,6 @@ body {
 
 /* REVIEWS STYLING */
 
-body {
-  box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
 #facilities-review-ctn {
   background-color: white;
   /* background-color: teal; */
@@ -140,7 +147,6 @@ body {
 }
 
 .review-head {
-  /* background-color: darkcyan; */
   margin: none;
   margin-bottom: 0px;
   padding: 3%;
@@ -198,16 +204,4 @@ body {
 .reviewer-comment {
   font-size: 1vw;
   margin-top: -10px;
-}
-
-.facilities-details-inner-container {
-  display: grid;
-  grid-template-columns: 60% 35%;
-  grid-gap: 100px;
-  width: 100%;
-  /* background-color: sienna; */
-}
-
-main {
-  width: 100%;
 }
