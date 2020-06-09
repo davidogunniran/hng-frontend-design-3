@@ -34,6 +34,7 @@
   color: rgba(13, 36, 60, 0.75);
   transition: ease .3s;
 }
+
 /* LOGO STYLE */
 .facility-details-logo {
   margin-right: auto;
@@ -44,7 +45,6 @@
 .facility-details-container nav ul li {
   list-style-type: none;
 }
-
 .facility-details-container nav ul li:nth-child(6) {
   padding: 11px 25px;
   margin-right: 0;
@@ -221,6 +221,7 @@
   .facility-details-container nav ul li:not(.facility-details-logo):not(.facility-hamburger) {
     display: none;
   }
+  /* MENU STYLES HERE */
   .facility-details-container nav ul .menu-btn{
     display: block;
   }
@@ -249,7 +250,6 @@
     background: #191e51;
     border-radius: 2px;
     top: 24px;
-    /* left: 20px; */
     margin: 6.5px 0;
   }
   
@@ -266,38 +266,6 @@
   .menu-btn .hamburger .btn-line:nth-child(3) {
     -webkit-transition-delay: .75s;
             transition-delay: .75s;
-  }
-  
-  .menu-btn #cross {
-    position: absolute;
-    height: 30%;
-    width: 30%;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  
-  .menu-btn #cross span {
-    background-color: #191e51;
-  }
-  
-  .menu-btn #cross span:nth-child(1) {
-    height: 0%;
-    width: 4px;
-    position: absolute;
-    top: 10%;
-    left: 48px;
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-  }
-  
-  .menu-btn #cross span:nth-child(2) {
-    width: 0%;
-    height: 4px;
-    position: absolute;
-    left: 10%;
-    top: 48px;
-    -webkit-transition-delay: .25s;
-            transition-delay: .25s;
   }
   
   .menu-btn.close .hamburger .btn-line {
@@ -318,32 +286,7 @@
     -webkit-transition-delay: .25s;
             transition-delay: .25s;
   }
-  
-  .menu-btn.close #cross span:nth-child(1) {
-    height: 80%;
-    -webkit-transition-delay: .625s;
-            transition-delay: .625s;
-  }
-  
-  .menu-btn.close #cross span:nth-child(2) {
-    width: 80%;
-    -webkit-transition-delay: .375s;
-            transition-delay: .375s;
-  }
-  
-  .menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.9;
-    visibility: hidden;
-    /* Nav animation */
-    /* end of nav styling*/
-  }
-  
-  .menu.show {
-    visibility: visible;
-  }
+
   .facilities-details-inner-container {
     display: grid;
     grid-template-columns: 100%;
