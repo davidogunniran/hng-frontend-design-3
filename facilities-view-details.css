@@ -14,11 +14,10 @@
   max-width: 100vw;  
   width: 100vw;
   height: 100vh;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
-
+#facility-view-details-mobile .menu-btn{
+  display: none;
+}
 /* NAV BAR STYLES */
 .facility-details-container nav {
   margin-top: 40px;
@@ -201,7 +200,7 @@
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   /* CONTAINER */
   .facility-details-container {
     padding: 0 4% 0 4%;
@@ -215,9 +214,133 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .facility-details-container {
     padding: 0 4% 0 4%;
+  }
+  .facility-details-container nav ul li:not(.facility-details-logo) {
+    display: none;
+  }
+
+  .menu-btn {
+    position: relative;
+    z-index: 3;
+    margin-left: 90%;
+    top: 51px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  
+  .menu-btn .hamburger {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .menu-btn .hamburger .btn-line {
+    width: 60px;
+    height: 4px;
+    position: relative;
+    background: #191e51;
+    border-radius: 2px;
+    top: 24px;
+    left: 20px;
+    margin: 10px 0;
+  }
+  
+  .menu-btn .hamburger .btn-line:nth-child(1) {
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+  }
+  
+  .menu-btn .hamburger .btn-line:nth-child(2) {
+    -webkit-transition-delay: .625s;
+            transition-delay: .625s;
+  }
+  
+  .menu-btn .hamburger .btn-line:nth-child(3) {
+    -webkit-transition-delay: .75s;
+            transition-delay: .75s;
+  }
+  
+  .menu-btn #cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .menu-btn #cross span {
+    background-color: #191e51;
+  }
+  
+  .menu-btn #cross span:nth-child(1) {
+    height: 0%;
+    width: 4px;
+    position: absolute;
+    top: 10%;
+    left: 48px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  
+  .menu-btn #cross span:nth-child(2) {
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    left: 10%;
+    top: 48px;
+    -webkit-transition-delay: .25s;
+            transition-delay: .25s;
+  }
+  
+  .menu-btn.close .hamburger .btn-line {
+    width: 0%;
+  }
+  
+  .menu-btn.close .hamburger .btn-line:nth-child(1) {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  
+  .menu-btn.close .hamburger .btn-line:nth-child(2) {
+    -webkit-transition-delay: .125s;
+            transition-delay: .125s;
+  }
+  
+  .menu-btn.close .hamburger .btn-line:nth-child(3) {
+    -webkit-transition-delay: .25s;
+            transition-delay: .25s;
+  }
+  
+  .menu-btn.close #cross span:nth-child(1) {
+    height: 80%;
+    -webkit-transition-delay: .625s;
+            transition-delay: .625s;
+  }
+  
+  .menu-btn.close #cross span:nth-child(2) {
+    width: 80%;
+    -webkit-transition-delay: .375s;
+            transition-delay: .375s;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+    /* Nav animation */
+    /* end of nav styling*/
+  }
+  
+  .menu.show {
+    visibility: visible;
   }
   .facilities-details-inner-container {
     display: grid;
@@ -252,9 +375,8 @@
     margin: none;
     padding-left: 5%
   }
-  
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
 
 }
